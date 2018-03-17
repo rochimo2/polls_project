@@ -135,6 +135,7 @@ def EliminarPregunta(request, question_id):
 #         fields = ['choice_text']
 #         template_name_suffix = '_update_form'
 
+# la página de inicio
 def PaginaInicio(request):
     if request.user.is_autenticated():
         context["contenido_premium"] = "Yeah!"
