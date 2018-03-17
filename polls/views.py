@@ -102,6 +102,7 @@ def EditarPregunta(request, question_id):
         # 'question': question,
         # 'error_message': "No seleccionaste ninguna opción.",})
 
+#para eliminar preguntas
 def EliminarPregunta(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
 
