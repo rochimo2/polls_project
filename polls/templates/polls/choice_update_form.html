@@ -1,0 +1,14 @@
+<!-- Intento crear una página que agregue las opciones a la pregunta seleccionada -->
+
+{% extends 'polls/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section>
+        <form action="{% url 'polls:choice_update_form' %}" method="post">
+            {% csrf_token %}
+            {{ formulario.as_p }}
+            <input type="submit" value ="Actualizar"/>
+        </form>
+    </section>
+{% endblock %}

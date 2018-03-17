@@ -1,0 +1,22 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    <section>
+        <div class='row mt-3 card bg-light'>
+            <div class='text-center'>
+                <form action="{% url 'polls:eliminar pregunta' pregunta.id %}" method='post'>
+                    <div class="form-group row">
+                        <div class=" col-sm-10">
+                            {% csrf_token %}
+                            {{form.as_p}}
+                            <input  class="btn btn-primary" role="button" type="submit" value="Eliminar pregunta"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock %}

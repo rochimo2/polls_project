@@ -1,0 +1,68 @@
+html, body, h1, h2, h3, p, ol, ul, li, a, p, form{
+    padding:.0;
+    border: 0;
+    margin: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+body{
+    background:#C67553;
+    font-family: 'Source Sans Pro', Corbel,Arial, Helvetica, sans-serif;
+  }
+
+h1{
+    padding: 20px 0 20px 0;
+    margin: 20px auto;
+    font-size: 24px;
+}
+
+h2{
+    font-size: 20px;
+}
+
+ul, form{
+    padding: 50px 0px 200px 0px;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+h2, .nav{
+    margin: 20px auto 20px auto;
+}
+
+h1, ul, form, h2, .nav{
+    text-align: center;
+    width: 80%;
+    background: #edf7ed;
+    box-shadow: -2px -2px 20;
+    border-radius: 15px;
+}
+
+.pregunta, .nav{
+    color:#122936;
+    text-decoration-line: none;
+    line-height: 55px;
+}
+
+.pregunta:hover, .nav:hover{
+    color:#0e242a;
+    font-weight: bold;
+}
+
+input[type="submit"]{
+    margin: 12px 0;
+    border-radius: 8px;
+    padding: 5px 20px;
+}
+
+.nav{
+    display: block;
+
+    padding: 10px;
+    text-decoration-line: none;
+}
+
+p{
+    padding-bottom: 12px;
+}

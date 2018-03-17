@@ -1,0 +1,23 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<section>
+	<div class="container ">
+			<div class='row mt-3 card bg-light'>
+				<div class='col-md-6 offset-md-3 text-center card-body'>
+					<form method="post">
+						<h3 class "m-3">Ingrese al sistema</h3>
+							{% csrf_token %}
+							{{ form.as_p }}
+						<input type="submit" class="btn btn-primary" value ="Ingresar"/>
+					</form>
+			</div>
+		</div>
+	</div>
+
+</section>
+
+{% endblock %}

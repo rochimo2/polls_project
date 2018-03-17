@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    // cuando el navegador termina de cargar la pagina se ejecuta la funcion 
+    // window.onload(), dentro de esta funcion le decimos que cambie el type del coso
+    // de fecha a date y listo.
+    window.onload = function() {
+        document.getElementById('pub_date').type="date";
+    }
+</script>
+
+
+{% extends 'polls/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<section>
+
+	<div class="container ">
+			<div class='row mt-3 card bg-light'>
+				<div class='col-md-6 offset-md-3 text-center card-body'>
+						<h4 class="m-3 ">Nueva pregunta</h4>
+				</div>
+			</div>
+
+	<div class='row mt-3 card bg-light'>
+			<div class='col-md-10 offset-md-1 text-center mx-auto card-body'>
+					<form action="/polls/post_url/" method='post'>
+							<div class="form-group">
+									<div class="m-3">
+											{% csrf_token %}
+											{{form.as_p}}
+											<!-- {{choice.as_p}} -->
+											<input  class="btn btn-primary" role="button" type="submit" value="Enviar!"/>
+									</div>
+							</div>
+					</form>
+					<!-- Comenté esta parte que sigue <form action="/polls/post_url"></form> -->
+					<!-- agrego link a página para agregar opciones -->
+			</div>
+	</div>
+	<div class="row mt-3 card bg-light">
+			<div class='col-md-10 offset-md-1 text-center card-body'>
+					<a href="{% url 'polls:choice_update_form' %}" class="btn btn-danger " role="button">Añadir opciones</a>
+			</div>
+	</div>
+</section>
+{% endblock %}
+

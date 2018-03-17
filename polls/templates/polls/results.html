@@ -1,0 +1,17 @@
+{% extends 'polls/base.html' %}
+{% load static %}
+
+
+{% block content %}
+        <section>
+             <h1>{{ question.question_text }}</h1>
+             <h2>Resultados parciales:</h2>
+                <ul>
+                {% for choice in question.choice_set.all %}
+                    <li>{{ choice.choice_text }} -- {{ choice.votes }} voto{{ choice.votes|pluralize }}</li>
+                {% endfor %}
+                </ul>
+
+            <a class="nav" href="{% url 'polls:detail' question.id %}">¿Querés votar de nuevo?</a>
+        </section>
+{% endblock %}
