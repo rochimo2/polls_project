@@ -27,7 +27,7 @@ class IndexView(generic.ListView):
 class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
-    
+
     def get_queryset(self):
         """
         Excludes any questions that aren't published yet.
@@ -102,7 +102,7 @@ def EditarPregunta(request, question_id):
         # 'question': question,
         # 'error_message': "No seleccionaste ninguna opción.",})
 
-#para eliminar preguntas
+# Para eliminar preguntas
 def EliminarPregunta(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
 
