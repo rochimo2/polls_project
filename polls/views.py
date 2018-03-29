@@ -6,11 +6,8 @@ from django.http import HttpResponseRedirect, Http404
 from django.urls import reverse
 from django.views import generic
 from django.utils import timezone
-
-
-#from django.forms.models import inlineformset_factory
-#Agrego import 3de febrero
 from django.views.generic.edit import UpdateView, CreateView, FormView
+
 from .models import Choice, Question
 from .forms import QuestionForm, ChoiceForm, IngresarForm, RegistrarForm
 

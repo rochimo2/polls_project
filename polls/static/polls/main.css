@@ -1,5 +1,5 @@
-.glyphicon{
-    font-size: 32px;
+h4, h3, h2, h1{
+    font-family: Script MT Bold !important;
 }
 
 li {
@@ -9,3 +9,4 @@ li {
 a{
     color: #282423;
 }
+
