@@ -50,25 +50,12 @@ class Question(models.Model):
 #     was_published_recently.short_description = 'Publicado recientemente?'
 
 
-# class ChoiceManager (models.Manager):
-#     def get_choice(self):
-#         qs = self.get_choice
-#         if qs.count() == 0:
-#             return "error message"
-
-class ChoiceManager(models.Manager):
-    def DoesNotExist(self, id):
-        qs = self.get_queryset().filter(id=id)
-        if qs.count() == 0:
-            return None
-        return qs
 
 class Choice(models.Model):
     question = models.ForeignKey(Question, on_delete=models.CASCADE)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
 
-    DoesNotExist = ChoiceManager()
 
     def __str__(self):
         return self.choice_text
